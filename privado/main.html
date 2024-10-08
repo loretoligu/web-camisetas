@@ -6,29 +6,40 @@
     <title>Camisetas</title>
 
     <link rel="stylesheet" href="style/main.css">
+    <script src="js/main.js"></script>
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
     <!-- Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />   
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container_header">
             <nav class="nav_top">
                 <a href="main.html">
-                    <img src="img/Logo-tienda.jpg" alt="logo">
+                    <img class="logo" src="img/Logo-tienda.jpg" alt="logo">
                 </a>  
                 <div class="navigator">CATÁLOGO</div>   
                 <div class="navigator">USUARIO</div>  
-                <div class="navigator">SOPORTE</div>        
+                <div class="navigator">SOPORTE</div>      
+                <div class="navigator">VISTA CLIENTE</div>   
             </nav>
             <div class="nav_top">
-                <div class="seach_icon">
-                    <span class="material-symbols-outlined">search</span>
-                </div>
-                <div>INICIAR SESIÓN</div> 
+                <div class="search">   
+                    <button id="search_button">
+                        <span class="material-icons">search</span>
+                    </button>
+                    <button id="search_button_bar">
+                        <span class="material-icons">search</span>
+                    </button>                
+                    <input type="text" name="search_bar" placeholder="Buscar..." id="search_bar">
+                    <button id="close_search_bar">
+                        <span class="material-icons">close</span>
+                    </button> 
+                </div>              
+                <div>CERRAR SESIÓN</div> 
             </div>
         </div>
         
