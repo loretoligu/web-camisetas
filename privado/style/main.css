@@ -7,7 +7,7 @@ body{
     font-family: "Darker Grotesque", sans-serif;
     font-optical-sizing: auto;
     font-size: large;
-    font-weight: 700;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -22,20 +22,14 @@ body{
     margin-left: 1rem;
 }
 
-section{
-    background-color: #706482;
-    height: 500px;
-}
-
-footer{
-    height: 250px;
-    background-color: #abbb9f;
-}
-
 .nav_top{
     display: flex;
     align-items: center;
     gap: 2rem;
+}
+
+.navigator{
+    font-weight: 700;
 }
 
 .search{
@@ -52,7 +46,6 @@ footer{
     margin-left: 62rem;
     border: solid 0.1rem #703d6f;
     border-radius: 1rem;
-    z-index: 1;
 } 
 
 #search_button_bar{
@@ -61,7 +54,6 @@ footer{
     align-items: center;
     background-color: #703d6f00;
     color: white;
-    padding: 0.17rem;
     margin-left: 42rem;
     border: none;
     z-index: 1;
@@ -73,7 +65,6 @@ footer{
     align-items: center;
     background-color: #703d6f00;
     color: white;
-    padding: 0.17rem;
     left: 94.8rem;
     border: none;
     z-index: 1;
@@ -97,7 +88,25 @@ footer{
     padding-right: 2.5rem;
 }
 
-
+#search_bar::placeholder{
+    color: white;
+}
 #search_bar:focus{
     outline: none;
+}
+
+.container_section{
+    background-color: #706482;
+    height: 500px;
+}
+
+.container_content{
+    background-color: #e6eba9;
+    margin: 2rem 15rem;
+    height: 300px;
+}
+
+footer{
+    height: 250px;
+    background-color: #abbb9f;
 }
