@@ -1,0 +1,96 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Darker Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-size: large;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #706482;
+}
+
+p{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    background-color: #e6eba9;
+    margin: 0 auto;
+    margin-top: 5rem;
+    height: 45rem;
+    width: 38rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    border-radius: 60px;
+}
+
+.login{
+    font-size: xx-large;
+    color: #703d6f;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    border-radius: 60px;
+    background-color: #703d6f;
+    padding: 4rem;
+    width: 17rem;
+    height: 18rem;
+}
+
+.form p{
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+input{
+    font-family: "Darker Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-size: medium;
+    font-weight: 500;
+    font-style: normal;
+    border: none;
+    border-radius: 15px;
+    height: 1.7rem;
+    width: 16rem;
+    padding-left: 2.5rem;
+}
+
+input::placeholder{
+    color: gray;
+}
+input:focus{
+    outline: none;
+}
+.usr span{
+    position: absolute;
+    color: gray;
+    top: 315px;
+    left: 816px;
+}
+
+.pw span{
+    position: absolute;
+    color: gray;
+    top: 421px;
+    left: 816px;
+}
+
+button{
+    border-radius: 20px;
+    font-family: "Darker Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-size: medium;
+    font-weight: 500;
+    font-style: normal;
+    padding: 5px 40px;
+    margin-top: 1rem;
+}

@@ -1,13 +1,13 @@
 <header>
     <div class="container_header">
         <nav class="nav_top">
-            <a href="main.html">
-                <img class="logo" src="img/Logo-tienda.jpg" alt="logo">
+            <a href="main.php">
+                <img class="logo" src="../img/Logo-tienda.jpg" alt="logo">
             </a>  
-            <div class="navigator">CATÁLOGO</div>   
-            <div class="navigator">USUARIO</div>  
-            <div class="navigator">SOPORTE</div>      
-            <div class="navigator">VISTA CLIENTE</div>   
+            <a href="catalogo.php" class="navigator">CATÁLOGO</a>   
+            <a class="navigator">USUARIO</a>  
+            <a class="navigator">SOPORTE</a>      
+            <a class="navigator">VISTA CLIENTE</a>   
         </nav>
         <div class="nav_top">
             <div class="search">   
@@ -22,7 +22,7 @@
                     <span class="material-icons">close</span>
                 </button> 
             </div>              
-            <div class="navigator">CERRAR SESIÓN</div> 
+            <a href="../login.php" class="navigator">CERRAR SESIÓN</a> 
         </div>
     </div>
 </header>

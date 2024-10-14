@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camisetas</title>
 
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/header.css">
-    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/footer.css">
     <script src="js/main.js"></script>
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,15 +18,15 @@
 </head>
 <body>
     <?php
-        include"includes/header.php";
+        include"../includes/header.php";
     ?>
     <section>
-        <div class="container_section">
-            <div class="container_content"></div>
+        <div class="container">
+            <div class="content"></div>
         </div>       
     </section>
     <?php
-        include"includes/footer.php";
+        include"../includes/footer.php";
     ?>
 </body>
 </html>

@@ -16,6 +16,14 @@
     gap: 2rem;
 }
 
+a{
+    text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: #703d6f;
+}
+
 .navigator{
     font-weight: 700;
 }
