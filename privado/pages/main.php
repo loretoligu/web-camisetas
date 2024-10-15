@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camisetas</title>
+    <title>Frikiland</title>
 
+    <!-- Styles -->
     <link rel="stylesheet" href="../style/main.css">
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/footer.css">
-    <script src="js/main.js"></script>
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

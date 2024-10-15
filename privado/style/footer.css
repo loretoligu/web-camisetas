@@ -2,3 +2,8 @@ footer{
     height: 250px;
     background-color: #abbb9f;
 }
+
+p{
+    margin: 0px;
+    padding: 0px;
+}

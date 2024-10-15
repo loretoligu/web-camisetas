@@ -26,6 +26,7 @@ a:link, a:visited, a:hover, a:active {
 
 .navigator{
     font-weight: 700;
+    color: #703d6f;
 }
 
 .search{
@@ -39,7 +40,7 @@ a:link, a:visited, a:hover, a:active {
     background-color: #703d6f;
     color: white;
     padding: 0.17rem;
-    margin-left: 58rem;
+    margin-left: 66rem;
     border: solid 0.1rem #703d6f;
     border-radius: 1rem;
 } 
@@ -50,7 +51,7 @@ a:link, a:visited, a:hover, a:active {
     align-items: center;
     background-color: #703d6f00;
     color: white;
-    margin-left: 38rem;
+    margin-left: 46rem;
     border: none;
     z-index: 1;
 }
@@ -61,7 +62,7 @@ a:link, a:visited, a:hover, a:active {
     align-items: center;
     background-color: #703d6f00;
     color: white;
-    left: 92.8rem;
+    left: 103.8rem;
     border: none;
     z-index: 1;
 }
@@ -74,7 +75,7 @@ a:link, a:visited, a:hover, a:active {
     margin-left: -1rem;
     border: solid 0.1rem #703d6f;
     border-radius: 1rem;
-    margin-left: 37.8rem;
+    margin-left: 46rem;
     width: 17rem;
     border: none;
 }

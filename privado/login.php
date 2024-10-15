@@ -16,12 +16,12 @@
             </div>
             <form class="form" name="login" action="<?php echo $_SERVER["PHP_SELF"]?>" method="POST">
                 <div class="usr">
-                    <p>Nombre de usuario</p>
+                    <label>Nombre de usuario</label>
                     <input type="text" name="user" placeholder="Usuario...">
                     <span class="material-icons">person</span>
                 </div>
                 <div class="pw">
-                    <p>Contraseña</p>
+                    <label>Contraseña</label>
                     <input type="password" name="pass" placeholder="Contraseña...">
                     <span class="material-icons">lock</span>
                 </div>
