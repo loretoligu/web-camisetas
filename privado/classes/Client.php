@@ -1,5 +1,5 @@
 <?php
-namespace class;
+namespace classes;
 class Client{
     private $id;
     private $name;

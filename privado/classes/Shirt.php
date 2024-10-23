@@ -8,31 +8,24 @@ class Shirt{
     private $size;
     private $category;
     private $pic;
+    private $table = "shirts";
+    private $folder = "../img";
 
-    public function __construct($ref,$color, $price, $size, $category, $pic) {
-        $this->ref = $this->setRef($ref);
+    public function __construct($ref="",$color="", $price="", $size="", $category="", $pic="") {
+        $this->ref = $ref;
         $this->color = $color;
         $this->price = $price;        
         $this->size = $size;
         $this->category = $category;
-        
-        if($pic !=""){
-            $this->savePic($pic);
-        }
     }
 
     public function getRef(){
         return $this->ref;
     }
 
-    public function setRef($ref){
-        if(is_numeric($ref)){
-            $this->ref = $ref;
-        }
-    }
-
-    private function savePic($pic){
-        $this->pic = uploadPic($pic,"../img/",5000000);
+    public function insert($form,$pic=""){
+        $conection = new Db();
+        $conection->insertDB($this->table,$form,$pic,$this->folder);
     }
 
     public function printTable(){

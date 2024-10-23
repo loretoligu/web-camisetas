@@ -1,106 +1,105 @@
 <?php
 
-function uploadPic($archivoFoto,$carpeta,$tamanoMaxArchivo){
-    $ruta = "";
-    $nombreArchivo = $archivoFoto['name'];
-    $tipo = $archivoFoto['type'];
-    $tamano = $archivoFoto['size'];
+function uploadPic($picFolder,$folder,$maxSize){
+    $route = "";
+    $fileName = $picFolder['name'];
+    $type = $picFolder['type'];
+    $size = $picFolder['size'];
 
-    //Valido que el formato de imagen sea un jpeg o un png
-    if((strpos($tipo, "jpeg") || strpos($tipo, "png")) && $tamano < $tamanoMaxArchivo ){
-        $nombreArchivo = limpiar_caracteres_especiales($nombreArchivo);
+    // Only jpeg or png
+    if((strpos($type, "jpeg") || strpos($type, "png")) && $size < $maxSize ){
+        $fileName = remove_special($fileName);
 
-        // reviso si ya existe algun archivo con el mismo nombre en la carpeta.
-        if(file_exists($carpeta.$nombreArchivo)){
-            $nombreCortado = cortarCadenaFinal($nombreArchivo);
-            $numeroAletario = time();
+        // Check if file exists with same name
+        if(file_exists($folder.$fileName)){
+            $NameCut = cutFinalString($fileName);
+            $randomNumber = time();
 
-            if(strpos($tipo, "jpeg")){
+            if(strpos($type, "jpeg")){
                 $extension = ".jpg";
             }else{
                 $extension = ".png";
             }
-            $nombreArchivo = $nombreCortado."_".$numeroAletario.$extension;
+            $fileName = $NameCut."_".$randomNumber.$extension;
         }
-        if(move_uploaded_file($archivoFoto['tmp_name'], $carpeta.$nombreArchivo)){
-            $ruta = $nombreArchivo;
+        if(move_uploaded_file($picFolder['tmp_name'], $folder.$fileName)){
+            $route = $fileName;
         }else{
             echo "<script>alert('No se ha podido guardar el archivo. Contacte con el administrador')</script>";
         }
     }else{
-
         echo "<script>alert('No es un formato de imagen permitido o tiene un tamaño superior al permitido')</script>";
-        $ruta = null;
+        $route = null;
     }
-    return $ruta;
+
+    return $route;
 }
 
 
-function limpiar_caracteres_especiales($cadena){
+function remove_special($name){
+    $name = utf8_decode($name);
 
-
-    //IMPORTANTE
-    $cadena = utf8_decode($cadena);
-
-    $cadena = str_replace(
+    $name = str_replace(
         array('?', '¿'),
         array('_', '_'),
-        $cadena
+        $name
     );
-    $cadena = str_replace(
+
+    $name = str_replace(
         array(' '),
         array('_'),
-        $cadena
+        $name
     );
-    $cadena = str_replace(
+
+    $name = str_replace(
         array('á', 'à', 'ä', 'â', 'ª', 'Á', 'À', 'Â', 'Ä'),
         array('a', 'a', 'a', 'a', 'a', 'A', 'A', 'A', 'A'),
-        $cadena
+        $name
     );
 
-    $cadena = str_replace(
+    $name = str_replace(
         array('é', 'è', 'ë', 'ê', 'É', 'È', 'Ê', 'Ë'),
         array('e', 'e', 'e', 'e', 'E', 'E', 'E', 'E'),
-        $cadena );
+        $name 
+    );
 
-    $cadena = str_replace(
+    $name = str_replace(
         array('í', 'ì', 'ï', 'î', 'Í', 'Ì', 'Ï', 'Î'),
         array('i', 'i', 'i', 'i', 'I', 'I', 'I', 'I'),
-        $cadena );
+        $name 
+    );
 
-    $cadena = str_replace(
+    $name = str_replace(
         array('ó', 'ò', 'ö', 'ô', 'Ó', 'Ò', 'Ö', 'Ô'),
         array('o', 'o', 'o', 'o', 'O', 'O', 'O', 'O'),
-        $cadena );
+        $name 
+    );
 
-    $cadena = str_replace(
+    $name = str_replace(
         array('ú', 'ù', 'ü', 'û', 'Ú', 'Ù', 'Û', 'Ü'),
         array('u', 'u', 'u', 'u', 'U', 'U', 'U', 'U'),
-        $cadena );
+        $name 
+    );
 
-    $cadena = str_replace(
+    $name = str_replace(
         array('ñ', 'Ñ', 'ç', 'Ç'),
         array('n', 'N', 'c', 'C'),
-        $cadena
-    );
-    $cadena = str_replace(
-        array('!', '¡'),
-        array('_', '_'),
-        $cadena
+        $name
     );
 
-//para ampliar los caracteres a reemplazar agregar lineas de este tipo:
-//$archivo = str_replace("caracter-que-queremos-cambiar","caracter-por-el-cual-lo-vamos-a-cambiar",$archivo);
-    return $cadena;
+    $name = str_replace(
+        array('!', '¡'),
+        array('_', '_'),
+        $name
+    );
+
+    return $name;
 }
 
 
-function cortarCadenaFinal($cadena, $caracter = "."){
-
-// localicamos en que posición se haya la $subcadena, en nuestro caso la posicion es "7"
-    $posicionsubcadena = strrpos ($cadena, $caracter);
-// eliminamos los caracteres desde $subcadena hacia la izq, y le sumamos 1 para borrar tambien el @ en este caso
-    $nombre = substr ($cadena, 0, ($posicionsubcadena));
-    return $nombre;
+function cutFinalString($name, $character = "."){
+    $positionSub = strrpos ($name, $character);
+    $finalName = substr ($name, 0, ($positionSub));
+    return $finalName;
 
 }

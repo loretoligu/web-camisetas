@@ -46,9 +46,14 @@ p{
     height: 18rem;
 }
 
-.form p{
+.form label{
     color: white;
-    margin-bottom: 0.5rem;
+}
+
+.usr, .pw{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 input{
@@ -66,10 +71,12 @@ input{
 
 input::placeholder{
     color: gray;
+
 }
 input:focus{
     outline: none;
 }
+
 .usr span{
     position: absolute;
     color: gray;
@@ -80,7 +87,7 @@ input:focus{
 .pw span{
     position: absolute;
     color: gray;
-    top: 421px;
+    top: 423px;
     left: 816px;
 }
 
