@@ -24,7 +24,17 @@
     ?>
     <section>
         <div class="container">
-            <div class="content"></div>
+            <div class="content">
+                <div class="question">
+                    <p>¿Qué necesitas hacer?</p>
+                </div>
+                <div class="options">
+                    <a href="newShirt.php" class="wrap">Dar de alta un nuevo producto</a>
+                    <a class="wrap">Modificar un producto</a>
+                    <a class="wrap">Eliminar un producto</a>
+                    <a href="catalog.php" class="wrap">Ver catálogo productos</a>
+                </div>
+            </div>
         </div>       
     </section>
     <?php

@@ -6,7 +6,7 @@
     <title>Frikiland</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../style/catalogo.css">
+    <link rel="stylesheet" href="../style/catalog.css">
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/footer.css">
     <!-- Scripts -->
@@ -25,14 +25,28 @@
     <section>
         <div class="container">
             <div class="content">
-                <div class="question">
-                    <p>¿Qué necesitas hacer?</p>
+                <div class="product">
+                    <div class="picture">
+                        <img class="shirt" src="../img/soyfriki.jpg">
+                    </div>
+                    <div class="especification">
+                        <p>14€</p>
+                        <p>Color</p>
+                        <p>Talla</p>
+                        <button>Comprar</button>
+                    </div>
                 </div>
-                <div class="options">
-                    <a href="altaCamiseta.php" class="wrap">Dar de alta un nuevo producto</a>
-                    <a class="wrap">Modificar un producto</a>
-                    <a class="wrap">Eliminar un producto</a>
-                    <a class="wrap">Ver catálogo productos</a>
+                <div class="product">
+                    <img>
+                    <p>Talla</p>
+                    <p>Color</p>
+                    <p>Precio</p>
+                </div>
+                <div class="product">
+                    <img>
+                    <p>Talla</p>
+                    <p>Color</p>
+                    <p>Precio</p>
                 </div>
             </div>
         </div>       

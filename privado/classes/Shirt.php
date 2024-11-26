@@ -8,8 +8,8 @@ class Shirt{
     private $size;
     private $category;
     private $pic;
-    private $table = "shirts";
-    private $folder = "../img";
+    private $table = "shirt";
+    private $folder = "../img/";
 
     public function __construct($ref="",$color="", $price="", $size="", $category="", $pic="") {
         $this->ref = $ref;

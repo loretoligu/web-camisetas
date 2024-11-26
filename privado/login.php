@@ -28,7 +28,7 @@
                 <button>Acceder</button>
             </form>
             <a href="main.html">
-                <img class="logo" src="img/Logo-tienda.jpg" alt="logo">
+                <img class="logo" src="logos/Logo-tienda.jpg" alt="logo">
             </a>            
     </div>
 </body>

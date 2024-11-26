@@ -7,7 +7,7 @@ class Db{
     private $server = "localhost";
     private $user = "root";
     private $password = "";
-    private $dataBase = "frikiland";
+    private $dataBase = "tshirtshop";
     private $conection;
 
     public function __construct(){
@@ -25,6 +25,7 @@ class Db{
         }
 
         if($pic != ""){
+            echo "Dentro en DB";
             $route = uploadPic($pic,$folder,5000000);
             $keys[] = "picture";
             $values[] = "'" . $route . "'";

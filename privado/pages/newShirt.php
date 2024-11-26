@@ -7,7 +7,7 @@
     if(isset($_POST) && !empty($_POST)){
         $shirt = new Shirt();
         $shirt->insert($_POST,$_FILES["picture"]);
-    }   
+    }
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frikiland</title>
     <!-- Styles -->
-    <link rel="stylesheet" href="../style/altaCamiseta.css">
+    <link rel="stylesheet" href="../style/newShirt.css">
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/footer.css">
     <!-- Scripts -->
@@ -38,7 +38,7 @@
                 <div class="base">
                     <p>ALTA NUEVA CAMISETA</p>
                 </div>
-                <form name="altaCamiseta" action="<?php echo $_SERVER["PHP_SELF"]?>" method="POST" enctype="multipart/form-data">
+                <form name="newShirt" action="<?php echo $_SERVER["PHP_SELF"]?>" method="POST" enctype="multipart/form-data">
                     <div class="data">
                         <label>Referencia: </label>
                         <input type="text" name="ref" placeholder="Escriba la referencia...">

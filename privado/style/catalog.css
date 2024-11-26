@@ -23,37 +23,31 @@ p{
 .content{
     background-color: #e6eba9;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     gap: 7rem;
     margin: 0 auto;
-    width:1400px;
-    height: 81%;
-    border-radius: 20px;
+    width: 1635px;
+    height: 100%;
+    border-radius: 8px;
 }
 
-.question{
-    font-size: xx-large;
-    color: #703d6f;
-    margin-top: 3rem;
-}
-.options{
+.product{
     display: flex;
-    gap: 3rem;
+    flex-direction: column;
+    height: 400px;
+    width: 300px;
+    padding: 10px;
 }
 
-.wrap{
-    background-color: #703d6f;
-    color: white;
-    font-size: x-large;
-    padding: 20px;
-    border-radius: 20px;
+.shirt{
+    max-width: 280px;
+    padding: 10px;
+    background-color: white;
 }
 
-.wrap:hover{
-    cursor: pointer;
-}
-
-.wrap:link, .wrap:visited, .wrap:hover, .wrap:active {
-    color: white;
+.especification{
+    display: flex;
+    justify-content: space-around;
+    font-weight: 800;
 }

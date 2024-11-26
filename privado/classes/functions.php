@@ -9,7 +9,7 @@ function uploadPic($picFolder,$folder,$maxSize){
     // Only jpeg or png
     if((strpos($type, "jpeg") || strpos($type, "png")) && $size < $maxSize ){
         $fileName = remove_special($fileName);
-
+        echo "Dentro tipo";
         // Check if file exists with same name
         if(file_exists($folder.$fileName)){
             $NameCut = cutFinalString($fileName);
@@ -24,6 +24,7 @@ function uploadPic($picFolder,$folder,$maxSize){
         }
         if(move_uploaded_file($picFolder['tmp_name'], $folder.$fileName)){
             $route = $fileName;
+            echo "Dentro copiado";
         }else{
             echo "<script>alert('No se ha podido guardar el archivo. Contacte con el administrador')</script>";
         }

@@ -2,9 +2,9 @@
     <div class="container_header">
         <nav class="nav_top">
             <a href="main.php">
-                <img class="logo" src="../img/Logo-tienda.jpg" alt="logo">
+                <img class="logo" src="../logos/Logo-tienda.jpg" alt="logo">
             </a>  
-            <a href="catalogo.php" class="navigator">CATÁLOGO</a>   
+            <a href="catalog.php" class="navigator">CATÁLOGO</a>   
             <a class="navigator">USUARIO</a>  
             <a class="navigator">SOPORTE</a>      
             <a class="navigator">VISTA CLIENTE</a>   
