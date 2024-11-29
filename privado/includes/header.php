@@ -22,7 +22,7 @@
                     <span class="material-icons">close</span>
                 </button> 
             </div>              
-            <a href="../login.php" class="navigator">CERRAR SESIÓN</a> 
+            <a href="logout.php" class="navigator">CERRAR SESIÓN</a> 
         </div>
     </div>
 </header>

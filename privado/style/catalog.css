@@ -3,7 +3,7 @@ body{
     padding: 0px;
     font-family: "Darker Grotesque", sans-serif;
     font-optical-sizing: auto;
-    font-size: large;
+    font-size: larger;
     font-weight: 500;
     font-style: normal;
 }
@@ -15,39 +15,101 @@ p{
 
 .container{
     background-color: #706482;
-    height: 564px;
+    min-height: 564px;
     padding-top: 4rem;
     padding-bottom: 4rem;
 }
 
 .content{
     background-color: #e6eba9;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 7rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    row-gap: 5rem;
     margin: 0 auto;
+    padding: 70px 0px;
     width: 1635px;
-    height: 100%;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 .product{
     display: flex;
     flex-direction: column;
     height: 400px;
-    width: 300px;
+    width: 310px;
     padding: 10px;
 }
 
+.picture{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: 320px 0px;
+    background-color: white;
+    width: 310px;
+
+}
+
 .shirt{
-    max-width: 280px;
+    margin: 0;
+    text-align: center;
+    max-height: 300px;
     padding: 10px;
     background-color: white;
 }
 
+.heart{
+    font-size: xx-large;
+    color: black;
+    position: relative;
+    bottom: 304px;
+    left: 2px;
+}
+
 .especification{
     display: flex;
-    justify-content: space-around;
-    font-weight: 800;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: large;
+}
+
+.price{
+    font-weight: 600;
+    font-size: larger;
+}
+
+.color{
+    color:black;
+    font-size: x-large;
+}
+
+.especification a{
+    background-color: #703d6f;
+    border: 2px solid #703d6f;
+    border-radius: 5px;
+    font-size: larger;
+    text-align: center
+}
+
+.especification a:link {
+    color: white;
+}
+
+.especification a:visited {
+    color: white;
+}
+
+.especification a:focus {
+    color: white;
+}
+
+.especification a:hover {
+    background-color: white;
+    cursor: pointer;
+    color: #703d6f;
+}
+
+.especification a:active {
+    color: #703d6f;
 }

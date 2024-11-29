@@ -40,7 +40,7 @@ a:link, a:visited, a:hover, a:active {
     background-color: #703d6f;
     color: white;
     padding: 0.17rem;
-    margin-left: 66rem;
+    margin-left: 65rem;
     border: solid 0.1rem #703d6f;
     border-radius: 1rem;
 } 
@@ -51,7 +51,7 @@ a:link, a:visited, a:hover, a:active {
     align-items: center;
     background-color: #703d6f00;
     color: white;
-    margin-left: 46rem;
+    margin-left: 45rem;
     border: none;
     z-index: 1;
 }

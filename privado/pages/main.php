@@ -29,10 +29,24 @@
                     <p>¿Qué necesitas hacer?</p>
                 </div>
                 <div class="options">
-                    <a href="newShirt.php" class="wrap">Dar de alta un nuevo producto</a>
-                    <a class="wrap">Modificar un producto</a>
-                    <a class="wrap">Eliminar un producto</a>
-                    <a href="catalog.php" class="wrap">Ver catálogo productos</a>
+                    <div class="categories">
+                        <p>Productos</p>
+                        <a href="newShirt.php">Dar de alta un nuevo producto</a>
+                        <a>Modificar producto</a>
+                        <a href="catalog.php">Ver catálogo productos</a>
+                    </div>
+                    <div class="categories">
+                        <p>Temáticas</p>
+                        <a href="newCategory.php">Dar de alta una nueva temática</a>
+                        <a>Modificar temática</a>
+                        <a href="categories.php">Ver temáticas</a>
+                    </div>
+                    <div class="categories">
+                        <p>Usuarios</p>
+                        <a href="newShirt.php">Dar de alta un nuevo usuario</a>
+                        <a>Modificar usuario</a>
+                        <a href="catalog.php">Ver usuarios</a>
+                    </div>
                 </div>
             </div>
         </div>       

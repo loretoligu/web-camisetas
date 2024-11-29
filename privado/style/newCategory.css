@@ -20,10 +20,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: space-around;
+    gap: 4rem;
     margin: 0 auto;
-    height: 25rem;
+    height: 13rem;
     width: 33rem;
     padding: 3rem;
     border-radius: 5px;
@@ -64,34 +64,11 @@ input{
     width: 74%;
 }
 
-input[type=color]{
-    background-color: #e6eba9;
-    width: 60px;
-}
-
-input[type=color], input[type=file]{
-    padding-left: 0px;
-}
-
-input::file-selector-button{
-    background-color: #703d6f;
-    color: white;
-    border-radius: 6px;
-    font-size: medium;
-}
-
-input:focus, select:focus{
-    outline-color: #703d6f;
-}
-
 select{
     border-radius: 6px;
     padding: 2px;
 }
 
-.data img{
-    max-width: 50px;
-}
 form button{
     border-radius: 6px;
     font-family: "Darker Grotesque", sans-serif;

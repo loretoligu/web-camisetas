@@ -1,13 +1,28 @@
 <?php
-    require "../classes/functions.php";
-    require "../classes/Shirt.php";
-    require"../classes/Db.php";
-    use classes\Shirt;
+require "../classes/functions.php";
+require "../classes/Shirt.php";
+require "../classes/Db.php";
+require "../classes/Category.php";
+
+use classes\CategoryList;
+use classes\Shirt;
     
-    if(isset($_POST) && !empty($_POST)){
-        $shirt = new Shirt();
+$shirt = new Shirt();
+
+if(isset($_GET["id"]) && !empty($_GET["id"])){
+    $id = intval($_GET["id"]);        
+    $shirt->getByID($id);
+} 
+
+if(isset($_POST) && !empty($_POST)){
+    if($_POST["id"] == ""){
         $shirt->insert($_POST,$_FILES["picture"]);
+        header("Location: catalog.php");
+    }else{
+        $shirt->update($_POST["id"],$_POST,$_FILES["picture"]);
+        header("Location: catalog.php");
     }
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -39,17 +54,22 @@
                     <p>ALTA NUEVA CAMISETA</p>
                 </div>
                 <form name="newShirt" action="<?php echo $_SERVER["PHP_SELF"]?>" method="POST" enctype="multipart/form-data">
-                    <div class="data">
+                <input type="hidden" name="id" value="<?php echo $shirt->getId(); ?>">    
+                <div class="data">
                         <label>Referencia: </label>
-                        <input type="text" name="ref" placeholder="Escriba la referencia...">
+                        <input type="text" name="ref" placeholder="Escriba la referencia..." value="<?php echo $shirt->getRef(); ?>">
+                    </div>
+                    <div class="data">
+                        <label>Nombre: </label>
+                        <input type="text" name="name" placeholder="Escriba el nombre del producto..." value="<?php echo $shirt->getName(); ?>">
                     </div>
                     <div class="data">
                         <label>Color: </label>
-                        <input type="color" name="color">
+                        <input type="color" name="color" value="<?php echo $shirt->getColor(); ?>">
                     </div>
                     <div class="data">
                     <label>Precio: </label>
-                    <input type="text" name="price" placeholder="Introduzca el precio...">
+                    <input type="text" name="price" placeholder="Introduzca el precio..." value="<?php echo $shirt->getPrice(); ?>">
                     </div>
                     <div class="data">
                         <label>Talla: </label>
@@ -61,12 +81,20 @@
                         </select>
                     </div>
                     <div class="data">
-                        <label>Tematica: </label>
-                        <input type="text" name="category" placeholder="Introduzca la temática...">
+                        <label>Temática: </label>
+                        <?php
+                            $categoryList = new CategoryList;
+                            $categoryList->printSelect($shirt->getCategory());
+                        ?>
                     </div>
                     <div class="data">
                         <label>Foto: </label>
                         <input type="file" name="picture">
+                        <?php
+                            if(strlen($shirt->getPic() > 0)){
+                                echo "<img src='../img/". $shirt->getPic() ."'>";
+                            }
+                        ?>
                     </div>
                     <button>Guardar</button>
                 </form>         

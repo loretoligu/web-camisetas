@@ -25,7 +25,6 @@ class Db{
         }
 
         if($pic != ""){
-            echo "Dentro en DB";
             $route = uploadPic($pic,$folder,5000000);
             $keys[] = "picture";
             $values[] = "'" . $route . "'";
@@ -33,5 +32,30 @@ class Db{
 
         $sql = "INSERT INTO " . $table . " (" . implode(",",$keys) . ") VALUES (" . implode(",",$values) . ")";
         $this->conection->query($sql);
+    }
+
+    public function consult($sql){
+        $res = $this->conection->query($sql);
+        return $res;
+    }
+
+    public function updateDB($id, $table, $data, $pic = "", $folder = ""){
+        $query = array();
+        foreach ($data as $field => $value) {
+            if ($field != "id" && $field != "x" && $field != "y") {
+                $query[] = $field . "='".addslashes($value)."'";
+            }
+        }
+
+        if($pic!= "" && strlen($pic['name'])>0){
+            $rute= uploadPic($pic, $folder,5000000);
+            $query[] = "picture='".$rute."'";
+        }
+
+        $fields = implode(",", $query);
+        $sql = "UPDATE " . $table . " SET " . $fields . " WHERE id=" . $id;
+        $conection = new Db();
+        echo $sql;
+        $conection->consult($sql);
     }
 }
