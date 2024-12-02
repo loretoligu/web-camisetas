@@ -1,12 +1,12 @@
 <?php
 
-use classes\ShirtList;
+use classes\userList;
 
     require "../classes/Db.php";
-    require "../classes/Shirt.php";
+    require "../classes/user.php";
 
-    $list = new ShirtList();
-    $list->getShirt();
+    $list = new UserList();
+    $list->getUser();
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ use classes\ShirtList;
     <title>Frikiland</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../style/catalog.css">
+    <link rel="stylesheet" href="../style/users.css">
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/footer.css">
     <!-- Scripts -->
@@ -36,9 +36,12 @@ use classes\ShirtList;
     <section>
         <div class="container">
             <div class="content">
-                <?php
-                    echo $list->catalogShirt();
-                ?>
+                <div class="title">
+                    <p>Lista de temáticas</p>
+                </div>
+                    <?php
+                        $list->listOfUsers();
+                    ?>
             </div>
         </div>       
     </section>

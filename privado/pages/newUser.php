@@ -7,10 +7,19 @@ use classes\User;
     
 $user = new User();
 
+if(isset($_GET["id"]) && !empty($_GET["id"])){
+    $id = intval($_GET["id"]);        
+    $user->getByID($id);
+} 
 
 if(isset($_POST) && !empty($_POST)){
-    $user->insert($_POST);
+    if($_POST["id"] == ""){
+        $user->insert($_POST);
     header("Location: users.php");
+    }else{
+        $user->update($_POST["id"],$_POST);
+        header("Location: users.php");
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -46,11 +55,11 @@ if(isset($_POST) && !empty($_POST)){
                 <input type="hidden" name="id" value="<?php echo $user->getId(); ?>">    
                     <div class="data">
                         <label>Nombre: </label>
-                        <input type="text" name="name" placeholder="Escriba el nombre..." value="<?php echo $user->getName(); ?>">
+                        <input type="text" name="name" placeholder="Nombre..." value="<?php echo $user->getName(); ?>">
                     </div>
                     <div class="data">
                         <label>Apellidos: </label>
-                        <input type="text" name="surname" placeholder="Escriba los apellidos..." value="<?php echo $user->getSurname(); ?>">
+                        <input type="text" name="surname" placeholder="Apellidos..." value="<?php echo $user->getSurname(); ?>">
                     </div>
                     <div class="data">
                         <label>Correo electrónico: </label>
@@ -59,6 +68,10 @@ if(isset($_POST) && !empty($_POST)){
                     <div class="data">
                         <label>Contraseña: </label>
                         <input type="password" name="password" placeholder="Contraseña..." value="<?php echo $user->getPassword(); ?>">
+                    </div>
+                    <div class="data">
+                        <label>Permiso: </label>
+                        <input type="text" name="permission" placeholder="Permiso..." value="<?php echo $user->getPermission(); ?>">
                     </div>
                     <button>Guardar</button>
                 </form>         

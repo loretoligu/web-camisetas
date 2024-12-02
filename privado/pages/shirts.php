@@ -4,6 +4,7 @@ use classes\ShirtList;
 
     require "../classes/Db.php";
     require "../classes/Shirt.php";
+    require "../classes/Category.php";
 
     $list = new ShirtList();
     $list->getShirt();
@@ -17,7 +18,7 @@ use classes\ShirtList;
     <title>Frikiland</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../style/catalog.css">
+    <link rel="stylesheet" href="../style/shirts.css">
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/footer.css">
     <!-- Scripts -->
@@ -36,9 +37,12 @@ use classes\ShirtList;
     <section>
         <div class="container">
             <div class="content">
-                <?php
-                    echo $list->catalogShirt();
-                ?>
+                <div class="title">
+                    <p>Lista de camisetas</p>
+                </div>
+                    <?php
+                        $list->listOfShirts();
+                    ?>
             </div>
         </div>       
     </section>

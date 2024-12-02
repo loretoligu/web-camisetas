@@ -21,13 +21,36 @@ class ShirtList{
         }
     }
 
-    public function listOfShirts(){
+    public function catalogShirt(){
         $txt = "";
+
+        for($i=0;$i<count($this->list);$i++){
+            $txt .= $this->list[$i]->getShirt();
+        }
+
+        return $txt;
+    }
+
+    public function listOfShirts(){
+        $txt = "<div class='grid'>
+            <div class='row header'>
+                <p>ID</p>
+                <p>Referencia</p>
+                <p>Nombre</p>
+                <p>Color</p>
+                <p>Precio</p>
+                <p>Talla</p>
+                <p>Temática</p>
+                <p>Foto</p>
+                <p>Modificar</p>
+            </div>";
 
         for($i=0;$i<count($this->list);$i++){
             $txt .= $this->list[$i]->getRow();
         }
 
+        $txt .= "</div>";
+        echo $txt;
         return $txt;
     }
 }
@@ -101,7 +124,7 @@ class Shirt{
         $this->pic = $pic;
     }
 
-    public function getRow(){
+    public function getShirt(){
         $txt = "<div class='product'>
             <div class='picture'>
                 <img class='shirt' src='../img/" . $this->pic . "'>
@@ -115,6 +138,24 @@ class Shirt{
                 </div>
                 <a href='newShirt.php?id=". $this->id.";'>Modificar producto</a> 
             </div>
+        </div>";
+
+        return $txt;
+    }
+
+    public function getRow(){
+        $category = new Category(); 
+        $category->getByID($this->category);
+        $txt = "<div class='row'>
+            <p>" . $this->id . "</p>
+            <p>" . $this->ref . "</p>
+            <p>" . $this->name . "</p>
+            <p>" . $this->color . "</p>
+            <p>" . $this->price . "</p>
+            <p>" . $this->size . "</p>
+            <p>" . $category->getName() . "</p>
+            <img src='../img/" . $this->pic . "'>
+            <p><a href='newShirt.php?id=". $this->id.";'>Modificar</a></p>
         </div>";
 
         return $txt;
