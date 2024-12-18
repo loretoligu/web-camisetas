@@ -31,6 +31,16 @@ class ShirtList{
         return $txt;
     }
 
+    public function catalogView(){
+        $txt = "";
+
+        for($i=0;$i<count($this->list);$i++){
+            $txt .= $this->list[$i]->getShirtView();
+        }
+
+        return $txt;
+    }
+
     public function listOfShirts(){
         $txt = "<div class='grid'>
             <div class='row header'>
@@ -128,7 +138,28 @@ class Shirt{
         $txt = "<div class='product'>
             <div class='picture'>
                 <img class='shirt' src='../img/" . $this->pic . "'>
-                <span class='heart'>♡</span>
+            </div>
+            <div class='especification'>
+                <p>" . $this->name . "</p>
+                <p>Referencia: " . $this->ref . "</p>
+                <p class='price'>" . $this->price . "€</p>
+                <div class='color'>
+                    <span style='color: ". $this->color . ";'>▀</span>
+                </div>
+                <a href='newShirt.php?id=". $this->id.";'>Modificar producto</a> 
+            </div>
+        </div>";
+
+        return $txt;
+    }
+
+    public function getShirtView(){
+        $txt = "<div class='product'>
+            <div class='card'>
+                <div class='picture'>
+                    <img class='shirt' src='../img/" . $this->pic . "'>    
+                </div>
+                <span id='heart' class='material-symbols-outlined'>favorite</span>
             </div>
             <div class='especification'>
                 <p>" . $this->name . "</p>
@@ -136,7 +167,7 @@ class Shirt{
                 <div class='color'>
                     <span style='color: ". $this->color . ";'>▀</span>
                 </div>
-                <a href='newShirt.php?id=". $this->id.";'>Modificar producto</a> 
+                <a>Añadir a la cesta</a> 
             </div>
         </div>";
 

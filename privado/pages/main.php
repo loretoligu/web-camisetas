@@ -32,18 +32,18 @@
                     <div class="categories">
                         <p>Productos</p>
                         <a href="newShirt.php">Dar de alta un nuevo producto</a>
-                        <a href="shirts.php">Modificar producto</a>
+                        <a href="shirtList.php">Modificar producto</a>
                         <a href="catalog.php">Ver catálogo productos</a>
                     </div>
                     <div class="categories">
                         <p>Temáticas</p>
                         <a href="newCategory.php">Dar de alta una nueva temática</a>
-                        <a href="categories.php">Ver o modificar temáticas</a>
+                        <a href="categoryList.php">Ver o modificar temáticas</a>
                     </div>
                     <div class="categories">
                         <p>Usuarios</p>
                         <a href="newUser.php">Dar de alta un nuevo usuario</a>
-                        <a href="users.php">Ver o modificar usuarios</a>
+                        <a href="userList.php">Ver o modificar usuarios</a>
                     </div>
                 </div>
             </div>

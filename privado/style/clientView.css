@@ -40,6 +40,10 @@ p{
     padding: 10px;
 }
 
+.card{
+    height: 320px;
+}
+
 .picture{
     display: grid;
     align-items: center;
@@ -47,7 +51,25 @@ p{
     grid-template-rows: 320px 0px;
     background-color: white;
     width: 310px;
+}
 
+.card span{
+    position: relative;
+    bottom: 316px;
+    left: 281px;
+    color: #703d6f;
+}
+
+.card span:hover{
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
 }
 
 .shirt{
@@ -77,6 +99,7 @@ p{
 }
 
 .especification a{
+    color: white;
     background-color: #703d6f;
     border: 2px solid #703d6f;
     border-radius: 5px;

@@ -17,7 +17,7 @@ use classes\userList;
     <title>Frikiland</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../style/users.css">
+    <link rel="stylesheet" href="../style/userList.css">
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/footer.css">
     <!-- Scripts -->

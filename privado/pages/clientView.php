@@ -1,12 +1,12 @@
 <?php
 
-use classes\CategoryList;
+use classes\ShirtList;
 
     require "../classes/Db.php";
-    require "../classes/Category.php";
+    require "../classes/Shirt.php";
 
-    $list = new CategoryList();
-    $list->getCategory();
+    $list = new ShirtList();
+    $list->getShirt();
 ?>
 
 <!DOCTYPE html>
@@ -17,17 +17,20 @@ use classes\CategoryList;
     <title>Frikiland</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../style/categories.css">
+    <link rel="stylesheet" href="../style/clientView.css">
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/footer.css">
     <!-- Scripts -->
     <script src="../js/main.js"></script>
+    <script src="../js/clientView.js"></script>
+    
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite" />
 </head>
 <body>
     <?php
@@ -36,12 +39,9 @@ use classes\CategoryList;
     <section>
         <div class="container">
             <div class="content">
-                <div class="title">
-                    <p>Lista de temáticas</p>
-                </div>
-                    <?php
-                        $list->listOfCategories();
-                    ?>
+                <?php
+                    echo $list->catalogView();
+                ?>
             </div>
         </div>       
     </section>

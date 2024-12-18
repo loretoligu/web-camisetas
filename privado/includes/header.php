@@ -7,7 +7,7 @@
             <a href="catalog.php" class="navigator">CATÁLOGO</a>   
             <a href="users.php" class="navigator">USUARIO</a>  
             <a class="navigator">SOPORTE</a>      
-            <a class="navigator">VISTA CLIENTE</a>   
+            <a href="clientView.php" class="navigator">VISTA CLIENTE</a>   
         </nav>
         <div class="nav_top">
             <div class="search">   
